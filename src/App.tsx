@@ -1,10 +1,20 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import Header from "./components/Header";
+
+const Layout = () => {
+  return (
+    <>
+      <Header isAuth={true} />
+      <Outlet />
+    </>
+  );
+};
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route />
+        <Route element={<Layout />}></Route>
       </Routes>
     </BrowserRouter>
   );
