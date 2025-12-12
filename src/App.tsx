@@ -4,12 +4,13 @@ import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import GamePage from "./pages/GamePage.tsx";
 import SignupPage from "./pages/SignupPage";
+import MyPage from "./pages/MyPage";
 
 const Layout = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
-        <div className="z-20 fixed top-0 left-0">
+      <div className="relative flex flex-col min-h-screen">
+        <div className="z-20 absolute top-0 left-0">
           <Header isAuth={true} />
         </div>
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/game" element={<GamePage />} />
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

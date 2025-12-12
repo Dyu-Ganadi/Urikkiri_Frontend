@@ -25,7 +25,10 @@ const Header = ({ isAuth }: Prop) => {
           </div>
           {clickProfile && (
             <div className="absolute right-24 top-16 w-[260px] rounded-[20px] border border-mono-3 overflow-hidden bg-white flex flex-col">
-              <div className="flex justify-center py-5 text-[25px] border-b border-mono-3">
+              <div
+                onClick={() => navigate("/mypage")}
+                className="flex justify-center py-5 text-[25px] border-b border-mono-3"
+              >
                 마이페이지
               </div>
               <div className="flex justify-center py-5 text-[25px] border-b border-mono-3">
